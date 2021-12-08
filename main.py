@@ -1,8 +1,6 @@
 from ctypes import resize
 import psutil
 
-# print(psutil.swap_memory())
-
 def get_cpu_params():
     result = {}
     result["cur_freq"] = psutil.cpu_freq(False).current
@@ -42,9 +40,6 @@ def display_params(**kwargs):
     print('***************************')
     
 
-
-
-
 def start():
     cpu_data = get_cpu_params()
     diskpart_data = get_disks()
@@ -55,3 +50,5 @@ def start():
 
 if __name__ == "__main__":
     start()
+
+    
